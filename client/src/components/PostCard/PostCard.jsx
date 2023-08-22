@@ -1,39 +1,49 @@
 "use client";
 import React, { useState } from "react";
-import "./postcard.css";
-import VoteCard from "../VoteCard/VoteCard";
-import CommentBox from "../CommentBox/CommentBox";
-import { useSelector } from "react-redux";
-import { userInfo } from "@/services/whoami";
+import "./postcard.css"; // Make sure to have your CSS file
 
-const PostCard = ({ name, image, issues, setModal }) => {
-  const [comment, addComment] = useState("");
+const PostCard = ({ username, image, content, upvotes, downvotes }) => {
+  const [currentUpvotes, setCurrentUpvotes] = useState(upvotes);
+  const [currentDownvotes, setCurrentDownvotes] = useState(downvotes);
 
-  const { data: user } = useSelector(userInfo);
+  const handleUpvote = () => {
+    setCurrentUpvotes(currentUpvotes + 1);
+  };
 
-  const onCommentChange = (e) => {
-    addComment(e.target.value);
+  const handleDownvote = () => {
+    setCurrentDownvotes(currentDownvotes + 1);
   };
 
   return (
     <div className="post-card">
       <div className="user-info">
-        <img
-          src={"/assets/placeholder.svg"}
-          alt={`${name}'s profile`}
-          className="user-image"
-        />
-        <span className="username">{name}</span>
+        <img src={image} alt={`${username}'s profile`} className="user-image" />
+        <span className="username">{username}</span>
       </div>
 
-      {issues.map((item, index) => {
+      {[1, 2, 3].map((item, index) => {
         return (
-          <VoteCard {...item} key={index} setModal={setModal} user={user} />
+          <div key={index}>
+            <p className="post-content">{content}</p>
+            <div className="vote-buttons">
+              <button
+                className="vote-button upvote-button"
+                onClick={handleUpvote}
+              >
+                ⬆️
+              </button>
+              <span className="vote-count">{currentUpvotes}</span>
+              <button
+                className="vote-button downvote-button"
+                onClick={handleDownvote}
+              >
+                ⬇️
+              </button>
+              <span className="vote-count">{currentDownvotes}</span>
+            </div>
+          </div>
         );
       })}
-      {user && (
-        <CommentBox comment={comment} onCommentChange={onCommentChange} />
-      )}
     </div>
   );
 };

@@ -2,7 +2,8 @@
 import TopNavBar from "@/layouts/TopNavBar";
 import "./globals.css";
 import { Inter } from "next/font/google";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
+import { useEffect } from "react";
 import { Provider } from "react-redux";
 import { store } from "@/store/store";
 const inter = Inter({ subsets: ["latin"] });
@@ -14,8 +15,14 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   const pathname = usePathname();
-
+  const router = useRouter();
   const noNav = ["/login", "/signup", "/forgetpassword"];
+
+  useEffect(() => {
+    if (!localStorage.getItem("token")) {
+      router.push("/login");
+    }
+  }, []);
 
   return (
     <html lang="en">

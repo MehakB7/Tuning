@@ -1,83 +1,92 @@
 export const dummyData = [
   {
-    name: "Alice Johnson",
-    username: "alice_j",
-    issues: [
-      {
-        upvote: 5,
-        downvote: 2,
-        content:
-          "Self-awareness: Take time to understand your strengths, weaknesses, values, and emotions. Self-awareness is the foundation of personal growth.",
-        issueId: "issue_1",
-      },
-      {
-        upvote: 3,
-        downvote: 1,
-        content:
-          "Communication Skills: Improve your ability to express yourself clearly and listen actively. Effective communication is crucial for building strong relationships.",
-        issueId: "issue_2",
-      },
-      {
-        upvote: 7,
-        downvote: 0,
-        content:
-          "Positive Thinking: Cultivate a positive mindset by practicing gratitude and focusing on solutions rather than dwelling on problems.",
-        issueId: "issue_3",
-      },
-    ],
+    id: 1,
+    image: "https://via.placeholder.com/50",
+    username: "Mummy Return",
+    content:
+      "I'm having trouble understanding how to solve quadratic equations. Can someone explain?",
+    upvotes: 10,
+    downvotes: 10,
   },
   {
-    name: "Bob Smith",
-    username: "bob_s",
-    issues: [
-      {
-        upvote: 2,
-        downvote: 4,
-        content:
-          "Time Management: Learn to prioritize tasks, set goals, and manage your time effectively to increase productivity and reduce stress.",
-        issueId: "issue_4",
-      },
-      {
-        upvote: 6,
-        downvote: 2,
-        content:
-          "Healthy Habits: Prioritize your physical well-being by adopting healthy habits such as regular exercise, balanced nutrition, and sufficient sleep.",
-        issueId: "issue_5",
-      },
-      {
-        upvote: 4,
-        downvote: 3,
-        content:
-          "Emotional Intelligence: Develop your ability to recognize and manage your own emotions, as well as understand and empathize with the emotions of others.",
-        issueId: "issue_6",
-      },
-    ],
+    id: 2,
+    image: "https://via.placeholder.com/50",
+    username: "Mummy Return",
+    content:
+      "I'm working on a React project and want to know the best ways to manage state. Any suggestions?",
+    upvotes: 10,
+    downvotes: 10,
   },
   {
-    name: "Emily Davis",
-    username: "emily_d",
-    issues: [
-      {
-        upvote: 1,
-        downvote: 5,
-        content:
-          "Adaptability: Embrace change and develop the flexibility to adjust to new situations and challenges with an open mind.",
-        issueId: "issue_7",
-      },
-      {
-        upvote: 3,
-        downvote: 2,
-        content:
-          "Continuous Learning: Commit to lifelong learning and personal growth by seeking out new knowledge, skills, and experiences.",
-        issueId: "issue_8",
-      },
-      {
-        upvote: 5,
-        downvote: 1,
-        content:
-          "Gratitude and Kindness: Practice gratitude and show kindness to others. Acts of kindness and appreciation can improve your own well-being as well as that of those around you.",
-        issueId: "issue_9",
-      },
-    ],
+    id: 3,
+    image: "https://via.placeholder.com/50",
+    username: "Mummy Return",
+    content:
+      "I'm new to web development and struggling with CSS flexbox. Can someone provide a beginner's guide?",
+    upvotes: 10,
+    downvotes: 10,
+  },
+  {
+    id: 4,
+    image: "https://via.placeholder.com/50",
+    username: "Mummy Return",
+    content:
+      "I'm interested in learning programming and can't decide between Python and JavaScript. What are your thoughts?",
+    upvotes: 10,
+    downvotes: 10,
+  },
+  {
+    id: 5,
+    image: "https://via.placeholder.com/50",
+    username: "Mummy Return",
+    content:
+      "My website is loading slowly. Any tips on optimizing its performance?",
+    upvotes: 10,
+    downvotes: 10,
+  },
+  {
+    id: 6,
+    image: "https://via.placeholder.com/50",
+    username: "Mummy Return",
+    content:
+      "I've built a Node.js app and want to deploy it. What are the steps to deploy a Node.js application?",
+    upvotes: 10,
+    downvotes: 10,
+  },
+  {
+    id: 7,
+    image: "https://via.placeholder.com/50",
+    username: "Mummy Return",
+    content:
+      "I'm struggling to grasp the concepts of object-oriented programming. Can someone provide simple explanations?",
+    upvotes: 10,
+    downvotes: 10,
+  },
+  {
+    id: 8,
+    image: "https://via.placeholder.com/50",
+    username: "Mummy Return",
+    content:
+      "How can I create responsive designs using CSS media queries? Any examples would be helpful.",
+    upvotes: 10,
+    downvotes: 10,
+  },
+  {
+    id: 9,
+    image: "https://via.placeholder.com/50",
+    username: "Mummy Return",
+    content:
+      "I'm encountering errors while using Git. What are some common Git issues and how can I troubleshoot them?",
+    upvotes: 10,
+    downvotes: 10,
+  },
+  {
+    id: 10,
+    image: "https://via.placeholder.com/50",
+    username: "Mummy Return",
+    content:
+      "I'm interested in machine learning. Can someone provide a beginner-friendly introduction to different machine learning algorithms?",
+    upvotes: 10,
+    downvotes: 10,
   },
 ];

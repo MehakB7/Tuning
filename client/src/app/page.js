@@ -3,27 +3,18 @@ import styles from "./page.module.css";
 import { dummyData } from "@/modal/Post";
 import PostCard from "@/components/PostCard/PostCard";
 import { useGetWhoAmIQuery } from "@/services/whoami";
-import { useGetUsersQuery } from "@/services/user";
-import { useState } from "react";
-import Login from "./login/login";
-import Modal from "@/components/Modal/Modal";
 
 export default function Home() {
-  useGetWhoAmIQuery();
-  const { data: UserData } = useGetUsersQuery();
-  const [isOpen, setModal] = useState(false);
+  const { loading, data } = useGetWhoAmIQuery();
 
   return (
     <main className={styles.main}>
       <header></header>
       <div className={styles.container}>
         {dummyData.map((item, index) => {
-          return <PostCard {...item} key={index} setModal={setModal} />;
+          return <PostCard {...item} key={index} />;
         })}
       </div>
-      <Modal isOpen={isOpen} onClose={() => setModal(false)}>
-        <Login guest={false} />
-      </Modal>
     </main>
   );
 }
